@@ -1,9 +1,8 @@
-import NextAuth from "next-auth"
-import GithubProvider from "next-auth/providers/github"
-import GoogleProvider from "next-auth/providers/google"
+import NextAuth from 'next-auth';
+import GithubProvider from 'next-auth/providers/github';
+import GoogleProvider from 'next-auth/providers/google';
 
 export const authOptions = {
-  
   providers: [
     GithubProvider({
       clientId: process.env.GITHUB_ID as string,
@@ -11,12 +10,11 @@ export const authOptions = {
     }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string
-    })
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+    }),
     // ...add more providers here
   ],
-  secret: process.env.JWT_SECRET
-  
-}
+  secret: process.env.JWT_SECRET,
+};
 
-export default NextAuth(authOptions)
+export default NextAuth(authOptions);

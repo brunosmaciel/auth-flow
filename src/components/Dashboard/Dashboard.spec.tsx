@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { render, screen } from '@testing-library/react';
-import { DashboardComponent } from './Dashboard';
 import userEvent from '@testing-library/user-event';
 import { signOut } from 'next-auth/react';
+
+import { DashboardComponent } from './Dashboard';
 
 jest.mock('next-auth/react', () => {
   return {

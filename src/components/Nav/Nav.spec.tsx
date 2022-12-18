@@ -4,7 +4,7 @@ import Nav from './Nav';
 
 describe('Navbar component', () => {
   it('render correctly when user isn`t authtenticated', () => {
-    const { getByRole, debug } = render(<Nav />);
+    const { getByRole } = render(<Nav />);
     expect(getByRole('profile-icon')).toBeInTheDocument();
   });
   it('should render user profile picture when authtenticated', () => {
@@ -17,7 +17,7 @@ describe('Navbar component', () => {
             name: 'fake-name',
           },
         }}
-      />,
+      />
     );
 
     expect(screen.getByAltText('userAvatar')).toBeInTheDocument();

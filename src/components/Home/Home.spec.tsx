@@ -14,11 +14,11 @@ jest.mock('next-auth/react', () => {
     useSession: jest.fn(() => {
       return { data: mockSession, status: 'authenticated' }; // return type is [] in v3 but changed to {} in v4
     }),
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     signIn: jest.fn(() => {}),
   };
 });
 
-const useSessionMocked = jest.mock('next-auth/react');
 describe('Home Component', () => {
   it('should render username when user is authenticated', () => {
     const { getByText } = render(<HomeComponent />);

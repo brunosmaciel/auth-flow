@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { mocked } from 'jest-mock';
-import { useSession, signIn } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 
 import LoginComponent from './Login';
 

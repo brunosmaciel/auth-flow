@@ -30,7 +30,7 @@ describe('Home Page', () => {
             expires: 'fake-date',
           },
         },
-      }),
+      })
     );
   });
   it('should redirect user to /login page when user is not authtenticated', async () => {
@@ -42,7 +42,7 @@ describe('Home Page', () => {
           destination: '/login',
           permanent: false,
         },
-      }),
+      })
     );
   });
 });

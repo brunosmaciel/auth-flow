@@ -5,7 +5,7 @@ import { Loading } from './Loading';
 describe('Loading Component', () => {
   it('render loading screen correctly', () => {
     // ARRANGE
-    const { getByText, debug } = render(<Loading isLoading={true} />);
+    const { getByText } = render(<Loading isLoading={true} />);
 
     expect(getByText('Loading...')).toBeTruthy();
   });

@@ -2,7 +2,7 @@ import { mocked } from 'jest-mock';
 import { GetServerSidePropsContext } from 'next';
 import { getSession } from 'next-auth/react';
 
-import { getServerSideProps } from './index';
+import { getServerSideProps } from '../pages/index';
 
 jest.mock('next-auth/react');
 const getSessionMocked = mocked(getSession);

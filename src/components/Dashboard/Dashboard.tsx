@@ -18,6 +18,8 @@ export const DashboardComponent = () => {
               src="https://placeimg.com/260/400/arch"
               className="max-w-sm rounded-lg shadow-2xl"
               alt="lala"
+              width={300}
+              height={100}
             />
             <div>
               <h1 className="text-5xl font-bold">
